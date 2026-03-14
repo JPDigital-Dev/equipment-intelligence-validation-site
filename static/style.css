@@ -283,7 +283,7 @@ p {
 }
 
 .hero-visual {
-    transform: translateY(-10px);
+    transform: translateY(-18px);
 }
 
 .eyebrow {
@@ -307,7 +307,7 @@ p {
 h1 {
     font-size: clamp(2.8rem, 7vw, 5.25rem);
     line-height: 1.08;
-    max-width: 18ch;
+    max-width: 16ch;
     letter-spacing: -0.03em;
     margin-top: 18px;
 }
@@ -328,13 +328,13 @@ h3 {
     max-width: 55ch;
     font-size: 1.05rem;
     line-height: 1.6;
-    margin-top: 24px;
+    margin-top: 20px;
 }
 
 .hero-benefits {
     display: grid;
     gap: 12px;
-    margin-top: 28px;
+    margin-top: 24px;
 }
 
 .hero-benefits li,
@@ -361,7 +361,7 @@ h3 {
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
-    margin: 32px 0 18px;
+    margin: 28px 0 14px;
 }
 
 .hero-trust {
@@ -370,20 +370,29 @@ h3 {
     margin-top: 0;
 }
 
+.hero-title {
+    font-size: clamp(3.2rem, 5vw, 5rem);
+    line-height: 1.01;
+    max-width: 11.5ch;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+    margin-top: 18px;
+}
+
 .hero-proof-strip {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 0;
-    margin-top: 20px;
-    color: rgba(234, 210, 156, 0.78);
-    font-size: 0.83rem;
+    margin-top: 18px;
+    color: rgba(234, 210, 156, 0.62);
+    font-size: 0.78rem;
     line-height: 1.4;
 }
 
 .hero-proof-strip span {
     position: relative;
-    padding: 0 14px;
+    padding: 0 12px;
     white-space: nowrap;
 }
 
@@ -401,8 +410,8 @@ h3 {
     left: -2px;
     top: 50%;
     transform: translateY(-50%);
-    color: rgba(198, 163, 91, 0.48);
-    font-size: 0.8rem;
+    color: rgba(198, 163, 91, 0.34);
+    font-size: 0.72rem;
 }
 
 .hero-visual-frame,
@@ -1063,5 +1072,9 @@ textarea:focus {
 
     h1 {
         max-width: 100%;
+    }
+
+    .hero-title {
+        max-width: 12ch;
     }
 }
