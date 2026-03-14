@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Equipment Intelligence for Field Operations</title>
-    <meta name="description" content="AI-powered receipt and invoice scanning that turns purchases into tracked assets with accountability, lifecycle history, and equipment intelligence for field operations.">
+    <meta name="description" content="Turn receipts and invoices into asset records with responsibility tracking, lifecycle history, and replacement intelligence for field operations teams.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,344 +19,326 @@
             </a>
             <nav class="nav-links">
                 <a href="#problem">Problem</a>
-                <a href="#solution">Solution</a>
-                <a href="#platform">Platform</a>
-                <a href="#program">Early Access</a>
-                <a href="#lead-form">Apply</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#who-its-for">Who It's For</a>
+                <a href="#lead-form">Early Access</a>
             </nav>
-            <a href="#lead-form" class="nav-cta">Join Early Access</a>
+            <a href="#lead-form" class="nav-cta">Request Early Access</a>
         </header>
 
         <main>
             <section class="hero section" id="hero">
                 <div class="hero-copy reveal">
                     <span class="eyebrow">Equipment Intelligence for Field Operations</span>
-                    <h1>Stop Buying the Same Equipment Twice Without Knowing Why.</h1>
+                    <h1>Track Equipment From Purchase to Replacement.</h1>
                     <p class="hero-subheadline">
-                        Turn receipts and invoices into live asset records with ownership history, lifecycle events,
-                        replacement reasons, and supplier performance insight.
+                        Turn receipts and invoices into trackable asset records with assignment history, lifecycle
+                        tracking, and replacement intelligence.
                     </p>
+                    <ul class="hero-benefits">
+                        <li>See who had the asset last</li>
+                        <li>Track installs, failures, and replacements</li>
+                        <li>Stop blind repeat purchases</li>
+                    </ul>
                     <div class="hero-actions">
-                        <a href="#lead-form" class="button button-primary">Join Early Access</a>
-                        <a href="#program" class="button button-secondary">Request a Pilot Conversation</a>
+                        <a href="#lead-form" class="button button-primary">Request Early Access</a>
+                        <a href="#lead-form" class="button button-secondary">Request a Pilot Conversation</a>
                     </div>
                     <p class="trust-note">Built for field operations, technical teams, and equipment-heavy businesses.</p>
-                    <div class="hero-stats">
-                        <div class="stat-card glass">
-                            <span class="stat-value" data-counter="100">0</span>
-                            <span class="stat-label">Asset events tracked across the lifecycle</span>
-                        </div>
-                        <div class="stat-card glass">
-                            <span class="stat-value" data-counter="4">0</span>
-                            <span class="stat-label">Qualification paths: early access, demo, pilot, updates</span>
-                        </div>
-                        <div class="stat-card glass">
-                            <span class="stat-value" data-counter="1">0</span>
-                            <span class="stat-label">Single source of accountability from purchase onward</span>
-                        </div>
-                    </div>
                 </div>
                 <div class="hero-visual reveal">
                     <div class="hero-visual-frame glass">
+                        <div class="hero-panel-top">
+                            <div>
+                                <span class="panel-label">Operational Visibility</span>
+                                <h3>From receipt to replacement, in one record system.</h3>
+                            </div>
+                            <div class="mini-stat">
+                                <span class="stat-value" data-counter="4">0</span>
+                                <span class="stat-label">core lifecycle stages tracked</span>
+                            </div>
+                        </div>
                         <img src="{{ url_for('static', filename='images/dashboard-mockup.svg') }}" alt="Dashboard concept mockup">
+                        <div class="hero-proof-grid">
+                            <div class="proof-card">
+                                <span class="proof-label">Current Assignee</span>
+                                <strong>Technician, vehicle, or site</strong>
+                            </div>
+                            <div class="proof-card">
+                                <span class="proof-label">Latest Event</span>
+                                <strong>Installed, failed, moved, replaced</strong>
+                            </div>
+                            <div class="proof-card">
+                                <span class="proof-label">Replacement Reason</span>
+                                <strong>Loss, wear, damage, supplier issue</strong>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section class="section problem-section" id="problem">
+            <section class="section problem-section section-band" id="problem">
                 <div class="section-heading reveal">
                     <span class="eyebrow">The Problem</span>
-                    <h2>Most equipment loss is really an accountability and lifecycle visibility problem.</h2>
+                    <h2>Companies repeatedly replace equipment because nobody can see the full operational history.</h2>
                     <p>
-                        Teams keep repurchasing tools, devices, and installed equipment because nobody can answer the
-                        same questions with confidence: where is the last one, who had it, did it fail or go missing,
-                        and how long did it actually last before the next purchase happened.
+                        Most businesses do not just have a receipt problem. They have a responsibility and lifecycle
+                        problem. The purchase happened, but the operational record never followed.
                     </p>
                 </div>
-                <div class="problem-grid">
-                    <article class="problem-card glass reveal">
-                        <h3>Missing context after purchase</h3>
-                        <p>Receipts prove money was spent, but they do not show where the asset ended up or who became responsible for it.</p>
-                    </article>
-                    <article class="problem-card glass reveal">
-                        <h3>No clear reason for replacement</h3>
-                        <p>When the same item is bought again, companies often cannot tell whether the previous asset failed, was lost, was stolen, or is still in service.</p>
-                    </article>
-                    <article class="problem-card glass reveal">
-                        <h3>No usable lifespan intelligence</h3>
-                        <p>Without linked purchase, assignment, and replacement history, supplier reliability and real-world equipment lifespan stay hidden.</p>
-                    </article>
+                <div class="problem-layout">
+                    <div class="problem-list glass reveal">
+                        <h3>When the same equipment gets bought again, teams often cannot answer:</h3>
+                        <ul>
+                            <li>Where the previous asset went</li>
+                            <li>Who had it last</li>
+                            <li>Whether it failed, was lost, or is still in use</li>
+                            <li>How long it actually lasted</li>
+                        </ul>
+                    </div>
+                    <div class="problem-grid">
+                        <article class="problem-card glass reveal">
+                            <h3>Purchases are disconnected from operations</h3>
+                            <p>The receipt exists, but nobody can see the asset's responsibility chain after it leaves procurement.</p>
+                        </article>
+                        <article class="problem-card glass reveal">
+                            <h3>Replacements happen without evidence</h3>
+                            <p>Teams rebuy tools and equipment without a clear record of failure, loss, or prior assignment.</p>
+                        </article>
+                        <article class="problem-card glass reveal">
+                            <h3>Lifespan decisions rely on guesswork</h3>
+                            <p>Without linked lifecycle events, supplier reliability and real-world asset lifespan stay invisible.</p>
+                        </article>
+                    </div>
                 </div>
             </section>
 
-            <section class="section solution-section" id="solution">
+            <section class="section how-section" id="how-it-works">
                 <div class="section-heading reveal">
-                    <span class="eyebrow">The Solution</span>
-                    <h2>Turn every receipt into a trackable asset record with a responsibility chain and lifecycle history.</h2>
+                    <span class="eyebrow">How It Works</span>
+                    <h2>A simple workflow that turns proof of purchase into ongoing equipment accountability.</h2>
                     <p>
-                        The platform starts at the document level, but it does not stop at document storage. It converts
-                        spend into operational records that can be assigned, updated, audited, and analyzed.
+                        The product starts with the receipt or invoice, then builds the record your operations team
+                        actually needs to manage equipment over time.
                     </p>
                 </div>
-                <div class="process-flow glass reveal">
-                    <div class="process-step">
+                <div class="flow-grid">
+                    <article class="flow-card glass reveal">
                         <span class="step-number">01</span>
-                        <h3>Receipt Scan</h3>
-                        <p>Capture invoices and receipts with AI-assisted extraction of purchase details.</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
+                        <h3>Scan receipt</h3>
+                        <p>Capture invoices and receipts so purchase data becomes structured instead of buried in files and inboxes.</p>
+                    </article>
+                    <article class="flow-card glass reveal">
                         <span class="step-number">02</span>
-                        <h3>Asset Created</h3>
-                        <p>Create a structured equipment record linked to the original purchase.</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
+                        <h3>Create asset record</h3>
+                        <p>Convert the purchase into a trackable equipment record tied to supplier, item type, and original source document.</p>
+                    </article>
+                    <article class="flow-card glass reveal">
                         <span class="step-number">03</span>
-                        <h3>Assigned</h3>
-                        <p>Link the asset to a technician, vehicle, site, job, or stock location.</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
+                        <h3>Assign responsibility</h3>
+                        <p>Link the asset to a technician, site, vehicle, workshop, or job so there is always a last-known owner.</p>
+                    </article>
+                    <article class="flow-card glass reveal">
                         <span class="step-number">04</span>
-                        <h3>Lifecycle Events</h3>
-                        <p>Log installs, moves, failures, replacements, and returns over time.</p>
-                    </div>
-                    <div class="process-arrow">→</div>
-                    <div class="process-step">
-                        <span class="step-number">05</span>
-                        <h3>Equipment Intelligence</h3>
-                        <p>See what lasts, what disappears, which suppliers underperform, and where waste comes from.</p>
-                    </div>
+                        <h3>Track lifecycle</h3>
+                        <p>Record installs, failures, moves, and replacements so repeat purchases are backed by evidence, not memory.</p>
+                    </article>
                 </div>
             </section>
 
-            <section class="section systems-section">
+            <section class="section audience-section section-band" id="who-its-for">
+                <div class="section-heading reveal">
+                    <span class="eyebrow">Who It's For</span>
+                    <h2>For operations-heavy businesses that replace, move, and lose equipment in the real world.</h2>
+                    <p>These teams deal with equipment churn constantly, but most still rely on fragmented tools to explain what happened.</p>
+                </div>
+                <div class="audience-grid">
+                    <article class="audience-card glass reveal">
+                        <h3>Security companies</h3>
+                        <p>Track installed devices, replacement history, and technician accountability across sites and service calls.</p>
+                    </article>
+                    <article class="audience-card glass reveal">
+                        <h3>Electrical contractors</h3>
+                        <p>Follow tools, equipment, and replacement patterns across jobs, vehicles, and technicians.</p>
+                    </article>
+                    <article class="audience-card glass reveal">
+                        <h3>Maintenance teams</h3>
+                        <p>Record asset use, failures, and replacement reasons instead of relying on verbal handovers and memory.</p>
+                    </article>
+                    <article class="audience-card glass reveal">
+                        <h3>Field technicians</h3>
+                        <p>Keep a clear chain of custody when equipment moves between jobs, vans, workshops, and stores.</p>
+                    </article>
+                    <article class="audience-card glass reveal">
+                        <h3>Service fleets</h3>
+                        <p>See what is assigned to which vehicle, what keeps getting replaced, and where waste is coming from.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section systems-section" id="systems-fail">
                 <div class="section-heading reveal">
                     <span class="eyebrow">Why Current Systems Fail</span>
-                    <h2>Spreadsheets and basic inventory tools capture counts, not operational accountability.</h2>
+                    <h2>Most teams already track something. The problem is that none of it creates lifecycle accountability.</h2>
                 </div>
-                <div class="cards-grid">
+                <div class="cards-grid systems-grid">
                     <article class="info-card glass reveal">
-                        <h3>No responsibility chain</h3>
-                        <p>You cannot confidently see who had the item last or who owned the handoff when it disappeared.</p>
-                    </article>
-                    <article class="info-card glass reveal">
-                        <h3>No asset timeline</h3>
-                        <p>Most systems do not show the sequence from purchase to assignment to failure to replacement.</p>
+                        <h3>Spreadsheets</h3>
+                        <p>They can list items, but they do not maintain a trusted record of who had the asset and what happened next.</p>
                     </article>
                     <article class="info-card glass reveal">
-                        <h3>No replacement history</h3>
-                        <p>Repeated purchases happen without a record tying the new item back to the previous one.</p>
+                        <h3>WhatsApp messages</h3>
+                        <p>Updates happen in chat threads, then disappear when someone needs a replacement explanation weeks later.</p>
                     </article>
                     <article class="info-card glass reveal">
-                        <h3>No real lifespan data</h3>
-                        <p>Supplier comparisons are guesswork when field lifespan is not measured against actual operating use.</p>
+                        <h3>Paper slips</h3>
+                        <p>Handwritten sign-outs rarely survive the full lifecycle of equipment moving through the field.</p>
                     </article>
                     <article class="info-card glass reveal">
-                        <h3>No operational accountability</h3>
-                        <p>Managers are left with spending records, but not the chain of evidence needed to reduce waste and loss.</p>
+                        <h3>Memory</h3>
+                        <p>Teams end up asking around to reconstruct where something went, who had it, or why it was replaced.</p>
                     </article>
-                </div>
-            </section>
-
-            <section class="section features-section" id="platform">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">What The Platform Tracks</span>
-                    <h2>A purpose-built record system for equipment-heavy teams.</h2>
-                </div>
-                <div class="cards-grid feature-grid">
-                    <article class="feature-card glass reveal">
-                        <h3>Receipt capture</h3>
-                        <p>Upload invoices and receipts as the starting point for structured operational records.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Asset registry</h3>
-                        <p>Convert purchases into trackable assets with categories, suppliers, and linked documents.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Responsibility history</h3>
-                        <p>Maintain a clear chain of custody across technicians, teams, vehicles, and job sites.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Assignment tracking</h3>
-                        <p>Know where the asset is now, where it was before, and which job or location it supports.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Failure and replacement events</h3>
-                        <p>Record why something was replaced and whether the issue was loss, damage, wear, or supplier quality.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Lifecycle timelines</h3>
-                        <p>Review every event from purchase through installation, maintenance, failure, and replacement.</p>
-                    </article>
-                    <article class="feature-card glass reveal">
-                        <h3>Equipment intelligence dashboard</h3>
-                        <p>See patterns in reliability, cost of churn, supplier performance, and repeated failure points.</p>
+                    <article class="info-card glass reveal">
+                        <h3>Basic inventory tools</h3>
+                        <p>They track stock counts, not operational context, failure history, or a real responsibility chain.</p>
                     </article>
                 </div>
             </section>
 
-            <section class="section mockups-section">
+            <section class="section mockups-section section-band" id="platform-visuals">
                 <div class="section-heading reveal">
-                    <span class="eyebrow">Concept Mockups</span>
-                    <h2>A product concept built for operational clarity, not vanity dashboards.</h2>
+                    <span class="eyebrow">Product Platform Visuals</span>
+                    <h2>A concept designed around operational clarity, responsibility tracking, and lifecycle evidence.</h2>
                 </div>
-                <div class="mockup-grid">
-                    <figure class="mockup-card glass reveal">
+                <div class="visuals-layout">
+                    <figure class="mockup-card mockup-feature glass reveal">
                         <img src="{{ url_for('static', filename='images/dashboard-mockup.svg') }}" alt="Dashboard concept">
-                        <figcaption>Dashboard showing live asset visibility, replacement alerts, and supplier patterns.</figcaption>
+                        <figcaption>
+                            <strong>Operations dashboard</strong>
+                            <span>See active assets, replacement signals, and reliability trends in one view.</span>
+                        </figcaption>
                     </figure>
-                    <figure class="mockup-card glass reveal">
-                        <img src="{{ url_for('static', filename='images/scanner-mockup.svg') }}" alt="Scanner concept">
-                        <figcaption>Receipt scanner that turns spend records into structured asset data.</figcaption>
-                    </figure>
-                    <figure class="mockup-card glass reveal">
-                        <img src="{{ url_for('static', filename='images/timeline-mockup.svg') }}" alt="Timeline concept">
-                        <figcaption>Lifecycle view from purchased to assigned to failed to replaced.</figcaption>
-                    </figure>
-                    <figure class="mockup-card glass reveal">
-                        <img src="{{ url_for('static', filename='images/accountability-mockup.svg') }}" alt="Accountability record concept">
-                        <figcaption>Responsibility record showing assignee, last location, and latest event.</figcaption>
-                    </figure>
-                </div>
-            </section>
-
-            <section class="section audience-section">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Who It’s For</span>
-                    <h2>Built for businesses where equipment, handoffs, and repeat purchases affect margin.</h2>
-                </div>
-                <div class="audience-list glass reveal">
-                    <span>Security companies</span>
-                    <span>Electrical contractors</span>
-                    <span>Plumbing businesses</span>
-                    <span>Field technicians</span>
-                    <span>Service fleets</span>
-                    <span>Maintenance teams</span>
-                    <span>Workshop operations</span>
-                    <span>Procurement-led service businesses</span>
-                </div>
-            </section>
-
-            <section class="section program-section" id="program">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Early Access Program</span>
-                    <h2>We are looking for a small number of operationally serious companies to shape the first version.</h2>
-                    <p>
-                        This is an early validation and pilot program for companies that feel the cost of duplicate purchases,
-                        weak visibility, and poor equipment accountability today.
-                    </p>
-                </div>
-                <div class="benefits-grid">
-                    <article class="benefit-card glass reveal">
-                        <h3>Influence the roadmap</h3>
-                        <p>Help shape the workflows, reports, and data structures that matter most in the field.</p>
-                    </article>
-                    <article class="benefit-card glass reveal">
-                        <h3>Discounted founding access</h3>
-                        <p>Early participants will be considered for founding customer pricing and rollout advantages.</p>
-                    </article>
-                    <article class="benefit-card glass reveal">
-                        <h3>Direct access to the founding team</h3>
-                        <p>Work closely with the team defining the product around real operational use cases.</p>
-                    </article>
-                    <article class="benefit-card glass reveal">
-                        <h3>Solve an expensive blind spot early</h3>
-                        <p>Reduce repeated spend and improve accountability before the problem compounds further.</p>
-                    </article>
+                    <div class="mockup-stack">
+                        <figure class="mockup-card glass reveal">
+                            <img src="{{ url_for('static', filename='images/scanner-mockup.svg') }}" alt="Scanner concept">
+                            <figcaption><strong>Receipt capture</strong><span>Turn source documents into structured asset records.</span></figcaption>
+                        </figure>
+                        <figure class="mockup-card glass reveal">
+                            <img src="{{ url_for('static', filename='images/timeline-mockup.svg') }}" alt="Timeline concept">
+                            <figcaption><strong>Lifecycle timeline</strong><span>Track each event from purchase to replacement.</span></figcaption>
+                        </figure>
+                        <figure class="mockup-card glass reveal">
+                            <img src="{{ url_for('static', filename='images/accountability-mockup.svg') }}" alt="Accountability record concept">
+                            <figcaption><strong>Responsibility record</strong><span>See the current assignee, last location, and latest event.</span></figcaption>
+                        </figure>
+                    </div>
                 </div>
             </section>
 
             <section class="section form-section" id="lead-form">
-                <div class="form-layout">
-                    <div class="form-intro reveal">
-                        <span class="eyebrow">Apply For Early Access</span>
-                        <h2>Tell us how equipment loss, poor tracking, or repeated purchases affect your operation.</h2>
-                        <p>
-                            We are speaking with owners, operations leads, workshop managers, maintenance teams, and
-                            procurement stakeholders who want stronger visibility from purchase to replacement.
-                        </p>
-                    </div>
-                    <div class="form-panel glass reveal">
-                        {% with messages = get_flashed_messages(with_categories=true) %}
-                            {% if messages %}
-                                {% for category, message in messages %}
-                                    <div class="flash flash-{{ category }}">{{ message }}</div>
-                                {% endfor %}
-                            {% endif %}
-                        {% endwith %}
-
-                        {% if errors.get('form') %}
-                            <div class="flash flash-error">{{ errors.get('form') }}</div>
-                        {% endif %}
-
-                        <form action="{{ url_for('early_access') }}" method="post" id="earlyAccessForm" novalidate>
-                            <div class="form-grid">
-                                <div class="form-group">
-                                    <label for="full_name">Full Name</label>
-                                    <input type="text" id="full_name" name="full_name" value="{{ form_data.full_name }}" required>
-                                    {% if errors.get('full_name') %}<span class="field-error">{{ errors.get('full_name') }}</span>{% endif %}
+                <div class="form-shell glass reveal">
+                    <div class="form-layout">
+                        <div class="form-intro">
+                            <span class="eyebrow">Early Access Program</span>
+                            <h2>Request Early Access</h2>
+                            <p>
+                                Tell us how equipment loss, poor tracking, or repeated purchases affect your operation.
+                            </p>
+                            <div class="program-points">
+                                <div class="program-point">
+                                    <strong>Serious validation conversations</strong>
+                                    <span>We are speaking with owners and operations leads who actively feel this problem.</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="company_name">Company Name</label>
-                                    <input type="text" id="company_name" name="company_name" value="{{ form_data.company_name }}" required>
-                                    {% if errors.get('company_name') %}<span class="field-error">{{ errors.get('company_name') }}</span>{% endif %}
+                                <div class="program-point">
+                                    <strong>Pilot and demo interest</strong>
+                                    <span>Use the same form to request early access, a pilot discussion, or a product demo.</span>
                                 </div>
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" value="{{ form_data.email }}" required>
-                                    {% if errors.get('email') %}<span class="field-error">{{ errors.get('email') }}</span>{% endif %}
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Phone Number</label>
-                                    <input type="tel" id="phone" name="phone" value="{{ form_data.phone }}" required>
-                                    {% if errors.get('phone') %}<span class="field-error">{{ errors.get('phone') }}</span>{% endif %}
-                                </div>
-                                <div class="form-group">
-                                    <label for="industry">Industry</label>
-                                    <select id="industry" name="industry" required>
-                                        <option value="">Select industry</option>
-                                        <option value="Security" {% if form_data.industry == 'Security' %}selected{% endif %}>Security</option>
-                                        <option value="Electrical" {% if form_data.industry == 'Electrical' %}selected{% endif %}>Electrical</option>
-                                        <option value="Plumbing" {% if form_data.industry == 'Plumbing' %}selected{% endif %}>Plumbing</option>
-                                        <option value="Maintenance" {% if form_data.industry == 'Maintenance' %}selected{% endif %}>Maintenance</option>
-                                        <option value="Field Service" {% if form_data.industry == 'Field Service' %}selected{% endif %}>Field Service</option>
-                                        <option value="Fleet Operations" {% if form_data.industry == 'Fleet Operations' %}selected{% endif %}>Fleet Operations</option>
-                                        <option value="Other" {% if form_data.industry == 'Other' %}selected{% endif %}>Other</option>
-                                    </select>
-                                    {% if errors.get('industry') %}<span class="field-error">{{ errors.get('industry') }}</span>{% endif %}
-                                </div>
-                                <div class="form-group">
-                                    <label for="company_size">Company Size</label>
-                                    <select id="company_size" name="company_size">
-                                        <option value="">Select company size</option>
-                                        <option value="1-10" {% if form_data.company_size == '1-10' %}selected{% endif %}>1-10</option>
-                                        <option value="11-50" {% if form_data.company_size == '11-50' %}selected{% endif %}>11-50</option>
-                                        <option value="51-200" {% if form_data.company_size == '51-200' %}selected{% endif %}>51-200</option>
-                                        <option value="201-500" {% if form_data.company_size == '201-500' %}selected{% endif %}>201-500</option>
-                                        <option value="500+" {% if form_data.company_size == '500+' %}selected{% endif %}>500+</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="interest_type">Interest Type</label>
-                                    <select id="interest_type" name="interest_type">
-                                        <option value="">Select interest type</option>
-                                        <option value="Early Access" {% if form_data.interest_type == 'Early Access' %}selected{% endif %}>Early Access</option>
-                                        <option value="Pilot Program" {% if form_data.interest_type == 'Pilot Program' %}selected{% endif %}>Pilot Program</option>
-                                        <option value="Demo Request" {% if form_data.interest_type == 'Demo Request' %}selected{% endif %}>Demo Request</option>
-                                        <option value="Just Keep Me Updated" {% if form_data.interest_type == 'Just Keep Me Updated' %}selected{% endif %}>Just Keep Me Updated</option>
-                                    </select>
-                                    {% if errors.get('interest_type') %}<span class="field-error">{{ errors.get('interest_type') }}</span>{% endif %}
-                                </div>
-                                <div class="form-group full-width">
-                                    <label for="biggest_challenge">Biggest Equipment Tracking Challenge</label>
-                                    <textarea id="biggest_challenge" name="biggest_challenge" rows="5" required>{{ form_data.biggest_challenge }}</textarea>
-                                    {% if errors.get('biggest_challenge') %}<span class="field-error">{{ errors.get('biggest_challenge') }}</span>{% endif %}
+                                <div class="program-point">
+                                    <strong>Product influence</strong>
+                                    <span>Qualified companies can help shape the workflow, reporting, and rollout priorities.</span>
                                 </div>
                             </div>
-                            <button type="submit" class="button button-primary button-full">Apply for Early Access</button>
-                        </form>
+                        </div>
+                        <div class="form-panel form-panel-strong">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                                {% if messages %}
+                                    {% for category, message in messages %}
+                                        <div class="flash flash-{{ category }}">{{ message }}</div>
+                                    {% endfor %}
+                                {% endif %}
+                            {% endwith %}
+
+                            {% if errors.get('form') %}
+                                <div class="flash flash-error">{{ errors.get('form') }}</div>
+                            {% endif %}
+
+                            <form action="{{ url_for('early_access') }}" method="post" id="earlyAccessForm" novalidate>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="full_name">Full Name</label>
+                                        <input type="text" id="full_name" name="full_name" value="{{ form_data.full_name }}" required>
+                                        {% if errors.get('full_name') %}<span class="field-error">{{ errors.get('full_name') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company_name">Company Name</label>
+                                        <input type="text" id="company_name" name="company_name" value="{{ form_data.company_name }}" required>
+                                        {% if errors.get('company_name') %}<span class="field-error">{{ errors.get('company_name') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" name="email" value="{{ form_data.email }}" required>
+                                        {% if errors.get('email') %}<span class="field-error">{{ errors.get('email') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" value="{{ form_data.phone }}" required>
+                                        {% if errors.get('phone') %}<span class="field-error">{{ errors.get('phone') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="industry">Industry</label>
+                                        <select id="industry" name="industry" required>
+                                            <option value="">Select industry</option>
+                                            <option value="Security" {% if form_data.industry == 'Security' %}selected{% endif %}>Security</option>
+                                            <option value="Electrical" {% if form_data.industry == 'Electrical' %}selected{% endif %}>Electrical</option>
+                                            <option value="Plumbing" {% if form_data.industry == 'Plumbing' %}selected{% endif %}>Plumbing</option>
+                                            <option value="Maintenance" {% if form_data.industry == 'Maintenance' %}selected{% endif %}>Maintenance</option>
+                                            <option value="Field Service" {% if form_data.industry == 'Field Service' %}selected{% endif %}>Field Service</option>
+                                            <option value="Fleet Operations" {% if form_data.industry == 'Fleet Operations' %}selected{% endif %}>Fleet Operations</option>
+                                            <option value="Other" {% if form_data.industry == 'Other' %}selected{% endif %}>Other</option>
+                                        </select>
+                                        {% if errors.get('industry') %}<span class="field-error">{{ errors.get('industry') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company_size">Company Size</label>
+                                        <select id="company_size" name="company_size">
+                                            <option value="">Select company size</option>
+                                            <option value="1-10" {% if form_data.company_size == '1-10' %}selected{% endif %}>1-10</option>
+                                            <option value="11-50" {% if form_data.company_size == '11-50' %}selected{% endif %}>11-50</option>
+                                            <option value="51-200" {% if form_data.company_size == '51-200' %}selected{% endif %}>51-200</option>
+                                            <option value="201-500" {% if form_data.company_size == '201-500' %}selected{% endif %}>201-500</option>
+                                            <option value="500+" {% if form_data.company_size == '500+' %}selected{% endif %}>500+</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="interest_type">Interest Type</label>
+                                        <select id="interest_type" name="interest_type">
+                                            <option value="">Select interest type</option>
+                                            <option value="Early Access" {% if form_data.interest_type == 'Early Access' %}selected{% endif %}>Early Access</option>
+                                            <option value="Pilot Program" {% if form_data.interest_type == 'Pilot Program' %}selected{% endif %}>Pilot Program</option>
+                                            <option value="Demo Request" {% if form_data.interest_type == 'Demo Request' %}selected{% endif %}>Demo Request</option>
+                                            <option value="Just Keep Me Updated" {% if form_data.interest_type == 'Just Keep Me Updated' %}selected{% endif %}>Just Keep Me Updated</option>
+                                        </select>
+                                        {% if errors.get('interest_type') %}<span class="field-error">{{ errors.get('interest_type') }}</span>{% endif %}
+                                    </div>
+                                    <div class="form-group full-width">
+                                        <label for="biggest_challenge">Biggest Equipment Tracking Challenge</label>
+                                        <textarea id="biggest_challenge" name="biggest_challenge" rows="5" required>{{ form_data.biggest_challenge }}</textarea>
+                                        {% if errors.get('biggest_challenge') %}<span class="field-error">{{ errors.get('biggest_challenge') }}</span>{% endif %}
+                                    </div>
+                                </div>
+                                <button type="submit" class="button button-primary button-full">Request Early Access</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -370,37 +352,37 @@
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">What problem does this solve?</button>
                         <div class="faq-answer">
-                            <p>It solves the gap between purchase records and operational accountability by turning receipts into tracked assets with assignment, lifecycle, and replacement history.</p>
+                            <p>It helps teams connect purchases to operational accountability by turning receipts into trackable asset records with assignment history, lifecycle events, and replacement context.</p>
                         </div>
                     </article>
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">Is the product live yet?</button>
                         <div class="faq-answer">
-                            <p>Not yet. This site is part of an early validation and design process to identify pilot partners and shape the first release with real operators.</p>
+                            <p>Not yet. This page is part of the validation process to qualify interest, gather operational feedback, and identify early pilot partners.</p>
                         </div>
                     </article>
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">Who is this for?</button>
                         <div class="faq-answer">
-                            <p>It is designed for field-operations businesses that buy, assign, replace, and maintain equipment across technicians, sites, vehicles, and jobs.</p>
+                            <p>It is designed for security companies, contractors, maintenance teams, field service businesses, and technical operations teams that manage repeat equipment purchases.</p>
                         </div>
                     </article>
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">Will there be a pilot program?</button>
                         <div class="faq-answer">
-                            <p>Yes. We plan to work with a small number of companies that want to pilot the workflow and help define the operational requirements early.</p>
+                            <p>Yes. We are looking for a small number of companies that want early conversations about fit, workflows, and pilot participation.</p>
                         </div>
                     </article>
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">Can we influence the product roadmap?</button>
                         <div class="faq-answer">
-                            <p>Yes. Early-access and pilot participants will have direct input into feature priorities, workflow structure, reporting needs, and rollout sequencing.</p>
+                            <p>Yes. Early-access and pilot participants will help shape the workflows, reporting priorities, and practical requirements for the first release.</p>
                         </div>
                     </article>
                     <article class="faq-item glass reveal">
                         <button class="faq-question" type="button">What kind of equipment can this track?</button>
                         <div class="faq-answer">
-                            <p>The concept is suited to tools, technical equipment, field devices, installed hardware, fleet-related gear, consumable-linked assets, and repeatedly purchased operational equipment.</p>
+                            <p>The concept is suited to tools, installed devices, technical equipment, workshop assets, vehicle-assigned gear, and repeatedly purchased operational items.</p>
                         </div>
                     </article>
                 </div>
@@ -408,13 +390,13 @@
 
             <section class="section final-cta-section">
                 <div class="final-cta glass reveal">
-                    <span class="eyebrow">The Opportunity</span>
-                    <h2>Equipment visibility should not end at the receipt.</h2>
+                    <span class="eyebrow">Final Call</span>
+                    <h2>Stop replacing equipment without knowing what happened to the last one.</h2>
                     <p>
-                        If your team buys the same tools, devices, or installed equipment again and again without a clear
-                        record of what happened to the previous asset, this platform is being built for that exact problem.
+                        If repeated equipment purchases, weak accountability, or poor asset visibility are costing your
+                        business money, request early access and join the validation conversation.
                     </p>
-                    <a href="#lead-form" class="button button-primary">Start the Conversation</a>
+                    <a href="#lead-form" class="button button-primary">Request Early Access</a>
                 </div>
             </section>
         </main>
@@ -422,14 +404,14 @@
         <footer class="site-footer">
             <div>
                 <h3>Equipment Intelligence</h3>
-                <p>Equipment accountability, lifecycle tracking, and supplier intelligence for field operations businesses.</p>
+                <p>Equipment accountability, lifecycle tracking, and replacement visibility for field operations businesses.</p>
             </div>
             <div class="footer-links">
                 <a href="{{ url_for('privacy') }}">Privacy</a>
                 <a href="mailto:hello@example.com">hello@example.com</a>
                 <a href="{{ url_for('admin_leads') }}">Admin Leads</a>
             </div>
-            <p class="copyright">© 2026 Equipment Intelligence. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Equipment Intelligence. All rights reserved.</p>
         </footer>
     </div>
 
