@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", () => {
     const counterItems = document.querySelectorAll("[data-counter]");
     const faqItems = document.querySelectorAll(".faq-item");
     const form = document.getElementById("earlyAccessForm");
+    const trackedSections = document.querySelectorAll("[data-track-section]");
+    const analyticsState = {
+        formStarted: false,
+        seenSections: new Set(),
+    };
+
+    const trackEvent = (name, payload = {}) => {
+        const eventPayload = {
+            event: name,
+            page: window.location.pathname,
+            timestamp: new Date().toISOString(),
+            ...payload,
+        };
+        console.log("[analytics]", eventPayload);
+    };
 
     const setNavbarState = () => {
         if (!navbar) return;
@@ -23,6 +38,15 @@ document.addEventListener("DOMContentLoaded", () => {
             if (target) {
                 event.preventDefault();
                 target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+
+    document.querySelectorAll(".js-track-click").forEach((button) => {
+        button.addEventListener("click", () => {
+            const eventName = button.dataset.event;
+            if (eventName) {
+                trackEvent(eventName, { label: button.textContent.trim() });
             }
         });
     });
@@ -93,7 +117,31 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveNav();
     window.addEventListener("scroll", updateActiveNav);
 
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const eventName = entry.target.dataset.trackSection;
+            if (!eventName || analyticsState.seenSections.has(eventName)) return;
+
+            analyticsState.seenSections.add(eventName);
+            trackEvent(eventName);
+        });
+    }, { threshold: 0.45 });
+
+    trackedSections.forEach((section) => sectionObserver.observe(section));
+
     if (form) {
+        const startTracking = () => {
+            if (analyticsState.formStarted) return;
+            analyticsState.formStarted = true;
+            trackEvent("form_start");
+        };
+
+        form.querySelectorAll("input, select, textarea").forEach((field) => {
+            field.addEventListener("focus", startTracking, { once: true });
+        });
+
         form.addEventListener("submit", (event) => {
             const requiredFields = form.querySelectorAll("[required]");
             let isValid = true;
@@ -114,9 +162,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
 
+            const phoneField = form.querySelector("#phone");
+            if (phoneField && !phoneField.value.trim()) {
+                phoneField.value = "Not provided";
+            }
+
+            const companySizeField = form.querySelector('input[name="company_size"]');
+            if (companySizeField && !companySizeField.value.trim()) {
+                companySizeField.value = "Not specified";
+            }
+
+            const interestTypeField = form.querySelector('input[name="interest_type"]');
+            if (interestTypeField && !interestTypeField.value.trim()) {
+                interestTypeField.value = "Early Access";
+            }
+
+            const challengeField = form.querySelector('input[name="biggest_challenge"]');
+            if (challengeField && !challengeField.value.trim()) {
+                challengeField.value = "Interested in early access for equipment accountability and lifecycle tracking.";
+            }
+
             if (!isValid) {
                 event.preventDefault();
+                return;
             }
+
+            trackEvent("form_submit");
         });
+    }
+
+    if (window.location.pathname.includes("thank-you")) {
+        trackEvent("thank_you_view");
     }
 });
