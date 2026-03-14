@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const setNavbarState = () => {
         if (!navbar) return;
         navbar.classList.toggle("scrolled", window.scrollY > 24);
+        navbar.classList.toggle("header-shrink", window.scrollY > 40);
     };
 
     setNavbarState();
