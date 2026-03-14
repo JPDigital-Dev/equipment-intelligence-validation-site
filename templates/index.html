@@ -7,7 +7,7 @@
     <meta name="description" content="The Equipment Intelligence Platform by JP Digital transforms receipts and invoices into structured asset records with accountability history, lifecycle tracking, and replacement visibility.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -31,58 +31,76 @@
         </header>
 
         <main>
-            <section class="section hero" id="hero">
+            <section class="hero section" id="hero">
+              <div class="container hero-grid">
                 <div class="hero-copy reveal">
-                    <span class="eyebrow">Operational Asset Intelligence Platform</span>
-                    <h1 class="hero-title">Track Equipment From Purchase to Replacement</h1>
-                    <p class="hero-subheadline">
-                        The Equipment Intelligence Platform transforms receipts and invoices into structured asset records with lifecycle tracking, accountability history, and replacement visibility.
-                    </p>
-                    <ul class="hero-benefits">
-                        <li>Know who had equipment last</li>
-                        <li>Track installs, failures, and replacements</li>
-                        <li>Prevent hidden asset loss and duplicate purchases</li>
-                    </ul>
-                    <div class="hero-actions">
-                        <a href="#lead-form" class="button button-primary js-track-click" data-event="hero_cta_click">Request Early Access</a>
-                        <a href="#platform-workflow" class="button button-secondary">View Platform Overview</a>
-                    </div>
-                    <p class="hero-trust">Built by JP Digital &mdash; a division of JP Global Holdings</p>
-                    <div class="hero-proof-strip" aria-label="Credibility highlights">
-                        <span>Built by JP Digital</span>
-                        <span>A JP Global Holdings Technology</span>
-                        <span>Designed for field operations teams</span>
-                    </div>
+                  <p class="eyebrow">Operational Asset Intelligence Platform</p>
+
+                  <h1 class="hero-title">Track Equipment From Purchase to Replacement</h1>
+
+                  <p class="hero-subhead hero-sub">
+                    The Equipment Intelligence Platform transforms receipts and invoices into structured asset records with lifecycle tracking, accountability history, and replacement visibility.
+                  </p>
+
+                  <ul class="hero-benefits">
+                    <li>Know who had equipment last</li>
+                    <li>Track installs, failures, and replacements</li>
+                    <li>Prevent hidden asset loss and duplicate purchases</li>
+                  </ul>
+
+                  <div class="hero-actions hero-cta">
+                    <a class="button button-gold magnetic js-track-click" data-event="hero_cta_click" href="#lead-form">Request Early Access</a>
+                    <a class="button button-ghost magnetic" href="#how-it-works">View Platform Overview</a>
+                  </div>
+
+                  <p class="hero-credibility">
+                    Built by JP Digital &mdash; a division of JP Global Holdings
+                  </p>
+
+                  <div class="hero-proof-strip" aria-label="Proof strip">
+                    <span>Built by JP Digital</span>
+                    <span>A JP Global Holdings Technology</span>
+                    <span>Designed for field operations teams</span>
+                  </div>
                 </div>
+
                 <div class="hero-visual reveal">
-                    <div class="hero-visual-frame glass">
-                        <div class="hero-visual-header">
-                            <div>
-                                <span class="panel-label">Operations Dashboard Concept</span>
-                                <h3>From receipt capture to replacement visibility.</h3>
-                            </div>
-                            <div class="mini-stat">
-                                <span class="stat-value" data-counter="4">0</span>
-                                <span class="stat-label">core lifecycle stages tracked</span>
-                            </div>
-                        </div>
-                        <img src="{{ url_for('static', filename='images/dashboard-mockup.svg') }}" alt="Equipment Intelligence dashboard visual">
-                        <div class="hero-proof-grid">
-                            <div class="proof-card">
-                                <span class="proof-label">Responsibility</span>
-                                <strong>Technician, vehicle, site, or job</strong>
-                            </div>
-                            <div class="proof-card">
-                                <span class="proof-label">Latest Event</span>
-                                <strong>Installed, failed, moved, or replaced</strong>
-                            </div>
-                            <div class="proof-card">
-                                <span class="proof-label">Replacement Context</span>
-                                <strong>Lifecycle history tied back to the original purchase</strong>
-                            </div>
-                        </div>
+                  <div class="hero-card frame-card">
+                    <p class="card-kicker">Operations dashboard concept</p>
+                    <h2>From receipt capture to replacement visibility.</h2>
+
+                    <div class="hero-card-topline">
+                      <div class="hero-stat-card">
+                        <strong>4</strong>
+                        <span>core lifecycle stages tracked</span>
+                      </div>
                     </div>
+
+                    <div class="hero-dashboard-wrap">
+                      <img
+                        src="{{ url_for('static', filename='images/dashboard-mockup.svg') }}"
+                        alt="Equipment Intelligence platform dashboard concept"
+                        class="hero-dashboard-image"
+                      />
+                    </div>
+
+                    <div class="hero-mini-cards">
+                      <div class="hero-mini-card">
+                        <span class="mini-label">Responsibility</span>
+                        <strong>Technician, vehicle, site, or job</strong>
+                      </div>
+                      <div class="hero-mini-card">
+                        <span class="mini-label">Latest event</span>
+                        <strong>Installed, failed, moved, or replaced</strong>
+                      </div>
+                      <div class="hero-mini-card">
+                        <span class="mini-label">Replacement context</span>
+                        <strong>Lifecycle history tied back to the original purchase</strong>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </section>
 
             <section class="section section-band problem-section" id="problem" data-track-section="scroll_problem_section">
