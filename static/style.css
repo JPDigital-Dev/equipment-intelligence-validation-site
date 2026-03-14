@@ -119,20 +119,19 @@ p {
     transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, backdrop-filter 180ms ease;
 }
 
-.site-header {
-    transition: all 0.25s ease;
-}
-
 .navbar,
 .site-header {
     transition:
         padding 0.28s ease,
         margin 0.28s ease,
         gap 0.28s ease,
-        background 0.25s ease,
-        border-color 0.25s ease,
-        box-shadow 0.25s ease,
-        backdrop-filter 0.25s ease;
+        background-color 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        backdrop-filter 0.28s ease,
+        -webkit-backdrop-filter 0.28s ease,
+        transform 0.28s ease,
+        opacity 0.28s ease;
 }
 
 .navbar.scrolled,
@@ -148,6 +147,7 @@ p {
     align-items: center;
     gap: 14px;
     min-width: 280px;
+    transition: gap 0.28s ease, transform 0.28s ease, opacity 0.28s ease;
 }
 
 .brand-mark {
@@ -162,6 +162,7 @@ p {
 .brand-stack {
     display: grid;
     gap: 2px;
+    transition: gap 0.28s ease, opacity 0.28s ease, transform 0.28s ease;
 }
 
 .brand-parent,
@@ -195,7 +196,7 @@ p {
     gap: 22px;
     color: var(--muted);
     font-size: 0.95rem;
-    transition: gap 0.28s ease, font-size 0.28s ease;
+    transition: gap 0.28s ease, font-size 0.28s ease, opacity 0.22s ease, transform 0.22s ease;
 }
 
 .nav-links a {
@@ -245,7 +246,8 @@ p {
         border-color 180ms ease,
         background 180ms ease,
         padding 0.28s ease,
-        font-size 0.28s ease;
+        font-size 0.28s ease,
+        opacity 0.28s ease;
 }
 
 .button:hover,
@@ -1156,20 +1158,61 @@ textarea:focus {
 
     .site-header.header-shrink,
     .navbar.header-shrink {
-        padding: 6px 16px;
+        padding: 4px 12px;
+        gap: 10px;
+        background: rgba(8, 10, 18, 0.72);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-color: rgba(198, 163, 91, 0.14);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.28);
     }
 
     .header-shrink .brand {
-        gap: 10px;
+        gap: 8px;
+        min-width: 0;
     }
 
     .header-shrink .brand-parent {
-        font-size: 0.66rem;
+        font-size: 0.6rem;
+    }
+
+    .header-shrink .brand-product,
+    .header-shrink .brand-title {
+        font-size: 13px;
+    }
+
+    .header-shrink .brand-support,
+    .header-shrink .brand-subtitle {
+        font-size: 9px;
+    }
+
+    .header-shrink .brand-stack {
+        gap: 1px;
+    }
+
+    .header-shrink .brand-mark {
+        width: 10px;
+        height: 10px;
+    }
+
+    .header-shrink .nav-cta {
+        padding: 8px 12px;
+        font-size: 0.76rem;
+        line-height: 1.1;
+        box-shadow: 0 10px 24px rgba(198, 163, 91, 0.14);
+    }
+
+    .header-shrink .nav-links,
+    .header-shrink .hero-nav,
+    .header-shrink nav {
+        display: none;
     }
 
     .header-shrink .nav-links,
     .header-shrink .hero-nav {
-        padding-bottom: 2px;
+        padding-bottom: 0;
+        opacity: 0;
+        transform: translateY(-6px);
     }
 }
 
