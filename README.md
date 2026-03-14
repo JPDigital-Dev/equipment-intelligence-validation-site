@@ -22,24 +22,24 @@ This is not the full SaaS platform yet. It is a premium lead-capture and concept
 
 ```text
 equipment-intelligence-validation-site/
-├── app.py
-├── requirements.txt
-├── README.md
-├── .gitignore
-├── leads.db
-├── templates/
-│   ├── index.html
-│   ├── privacy.html
-│   ├── thank-you.html
-│   └── admin-leads.html
-└── static/
-    ├── style.css
-    ├── main.js
-    └── images/
-        ├── dashboard-mockup.svg
-        ├── timeline-mockup.svg
-        ├── scanner-mockup.svg
-        └── accountability-mockup.svg
+|-- app.py
+|-- requirements.txt
+|-- README.md
+|-- .gitignore
+|-- leads.db
+|-- templates/
+|   |-- index.html
+|   |-- privacy.html
+|   |-- thank-you.html
+|   `-- admin-leads.html
+`-- static/
+    |-- style.css
+    |-- main.js
+    `-- images/
+        |-- dashboard-mockup.svg
+        |-- timeline-mockup.svg
+        |-- scanner-mockup.svg
+        `-- accountability-mockup.svg
 ```
 
 `leads.db` is created automatically the first time the app runs.
@@ -105,6 +105,67 @@ The `leads` table includes:
 
 SQLite is fine for validation and early market testing, but should later be replaced with a production-grade managed database for scale, backup, and access control.
 
+## Lead Automation
+
+Successful lead submissions follow this sequence:
+
+1. Save to SQLite
+2. Append to Google Sheets
+3. Send an internal alert email
+4. Send a confirmation email to the lead
+5. Redirect to `/thank-you`
+
+SQLite remains the primary action. If Google Sheets or email fails, the submission still succeeds and the errors are logged server-side.
+
+### Required Environment Variables
+
+- `SECRET_KEY`
+- `GOOGLE_SHEETS_SPREADSHEET_ID`
+- `GOOGLE_SHEETS_RANGE`
+- `GOOGLE_SERVICE_ACCOUNT_JSON`
+- `RESEND_API_KEY`
+- `ALERT_TO_EMAIL`
+- `FROM_EMAIL`
+
+### Google Sheets Setup
+
+1. Create a Google Sheet for lead capture.
+2. Add a worksheet and decide which append range you want to use, for example `Leads!A:L`.
+3. Add these columns in order:
+
+```text
+timestamp
+full_name
+company_name
+email
+phone
+industry
+company_size
+interest_type
+biggest_challenge
+source
+status
+notes
+```
+
+4. Create a Google Cloud service account with access to the Google Sheets API.
+5. Download the service account JSON key.
+6. Store the full JSON contents in `GOOGLE_SERVICE_ACCOUNT_JSON`.
+7. Share the Google Sheet with the service account email address so it can append rows.
+
+### Email Setup With Resend
+
+The app uses Resend to send:
+
+- an internal notification to `ALERT_TO_EMAIL`
+- an automatic confirmation email to the lead
+
+Make sure:
+
+- `RESEND_API_KEY` is set
+- `FROM_EMAIL` uses a domain or sender identity verified in Resend
+- `ALERT_TO_EMAIL` points to the inbox that should receive lead alerts
+
 ## Admin Leads View
 
 The internal leads view is available at:
@@ -167,11 +228,10 @@ Build Command: pip install -r requirements.txt
 Start Command: python app.py
 ```
 
-7. Deploy the service.
+7. Add the required environment variables in the Render dashboard.
+8. Deploy the service.
 
-Optional environment variables:
-
-- `SECRET_KEY` for secure Flask session and flash messaging
+Render can auto-deploy from a linked GitHub repository on future pushes.
 
 ## Notes
 
@@ -179,3 +239,4 @@ Optional environment variables:
 - The frontend uses HTML, CSS, and vanilla JavaScript.
 - The backend uses Flask and SQLite.
 - The site includes a lead form, thank-you flow, privacy page, and internal leads dashboard.
+- External integrations are intentionally non-blocking so lead capture remains reliable.
