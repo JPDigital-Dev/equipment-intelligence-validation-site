@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Leads | Equipment Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="inner-page">
+    <div class="site-shell">
+        <header class="navbar solid">
+            <a href="{{ url_for('index') }}" class="brand">
+                <span class="brand-mark"></span>
+                <span>Equipment Intelligence</span>
+            </a>
+            <nav class="nav-links">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('privacy') }}">Privacy</a>
+            </nav>
+        </header>
+
+        <main class="section admin-wrap">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Internal View</span>
+                <h1>Captured Leads</h1>
+                <p>Total leads: <strong>{{ total_leads }}</strong></p>
+                <p class="admin-note">Production note: this route should be protected with authentication before any live rollout.</p>
+            </div>
+
+            <div class="table-card glass reveal">
+                <div class="table-scroll">
+                    <table class="leads-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Company</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Industry</th>
+                                <th>Interest Type</th>
+                                <th>Biggest Challenge</th>
+                                <th>Created At</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if leads %}
+                                {% for lead in leads %}
+                                    <tr>
+                                        <td>{{ lead.full_name }}</td>
+                                        <td>{{ lead.company_name }}</td>
+                                        <td><a href="mailto:{{ lead.email }}">{{ lead.email }}</a></td>
+                                        <td>{{ lead.phone }}</td>
+                                        <td>{{ lead.industry }}</td>
+                                        <td>{{ lead.interest_type }}</td>
+                                        <td class="challenge-cell">{{ lead.biggest_challenge }}</td>
+                                        <td>{{ lead.created_at }}</td>
+                                    </tr>
+                                {% endfor %}
+                            {% else %}
+                                <tr>
+                                    <td colspan="8" class="empty-state">No leads captured yet.</td>
+                                </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

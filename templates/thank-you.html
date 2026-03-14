@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Equipment Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="inner-page">
+    <div class="site-shell">
+        <header class="navbar solid">
+            <a href="{{ url_for('index') }}" class="brand">
+                <span class="brand-mark"></span>
+                <span>Equipment Intelligence</span>
+            </a>
+        </header>
+
+        <main class="section thank-you-wrap">
+            <div class="thank-you-card glass reveal">
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, message in messages %}
+                            <div class="flash flash-{{ category }}">{{ message }}</div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+                <span class="eyebrow">Submission Received</span>
+                <h1>Thank you for raising your hand.</h1>
+                <p>
+                    Your interest has been recorded. We will use your details to qualify early-access conversations,
+                    demo requests, and pilot-program outreach as we validate demand and shape the first version of the platform.
+                </p>
+                <div class="hero-actions">
+                    <a href="{{ url_for('index') }}" class="button button-primary">Return to Homepage</a>
+                    <a href="{{ url_for('admin_leads') }}" class="button button-secondary">View Admin Leads</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

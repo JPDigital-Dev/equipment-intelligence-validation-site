@@ -1,0 +1,18 @@
+<svg width="1200" height="840" viewBox="0 0 1200 840" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="840" rx="32" fill="#07101D"/>
+  <rect x="52" y="52" width="1096" height="736" rx="30" fill="#0B1525" stroke="#1A334F"/>
+  <text x="96" y="120" fill="#F4F8FF" font-family="Arial, sans-serif" font-size="42" font-weight="700">Accountability Record</text>
+  <text x="96" y="160" fill="#93A9C7" font-family="Arial, sans-serif" font-size="22">See who is responsible, where the asset was last seen, and what happened most recently.</text>
+  <rect x="96" y="220" width="1008" height="484" rx="28" fill="#0E1B2F" stroke="#21496C"/>
+  <rect x="138" y="262" width="924" height="86" rx="22" fill="#0B1525"/>
+  <text x="174" y="315" fill="#93A9C7" font-family="Arial, sans-serif" font-size="24">Current Assignee</text>
+  <text x="808" y="315" fill="#F4F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">J. Mokoena</text>
+  <rect x="138" y="378" width="924" height="86" rx="22" fill="#0B1525"/>
+  <text x="174" y="431" fill="#93A9C7" font-family="Arial, sans-serif" font-size="24">Last Known Location</text>
+  <text x="690" y="431" fill="#F4F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Vehicle 12 / Site Delta</text>
+  <rect x="138" y="494" width="924" height="86" rx="22" fill="#0B1525"/>
+  <text x="174" y="547" fill="#93A9C7" font-family="Arial, sans-serif" font-size="24">Last Event</text>
+  <text x="798" y="547" fill="#F4F8FF" font-family="Arial, sans-serif" font-size="28" font-weight="700">Battery failure reported</text>
+  <rect x="138" y="610" width="924" height="52" rx="18" fill="#10233A"/>
+  <text x="174" y="644" fill="#4DDCFF" font-family="Arial, sans-serif" font-size="22" font-weight="700">Status: Awaiting replacement approval</text>
+</svg>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Equipment Intelligence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="inner-page">
+    <div class="site-shell">
+        <header class="navbar solid">
+            <a href="{{ url_for('index') }}" class="brand">
+                <span class="brand-mark"></span>
+                <span>Equipment Intelligence</span>
+            </a>
+            <nav class="nav-links">
+                <a href="{{ url_for('index') }}#problem">Problem</a>
+                <a href="{{ url_for('index') }}#platform">Platform</a>
+                <a href="{{ url_for('index') }}#lead-form">Apply</a>
+            </nav>
+        </header>
+
+        <main class="section inner-content">
+            <div class="section-heading reveal">
+                <span class="eyebrow">Privacy</span>
+                <h1>Privacy Policy</h1>
+                <p>This validation site collects business contact information to support early-access conversations, demo requests, and pilot-program outreach.</p>
+            </div>
+
+            <div class="content-card glass reveal">
+                <h2>What We Collect</h2>
+                <p>We collect the information you submit through the early-access form, including your name, company name, email address, phone number, industry, company size, interest type, and operational challenge details.</p>
+
+                <h2>Why We Collect It</h2>
+                <p>We use this information to assess product demand, identify suitable pilot and demo candidates, and communicate about early product development opportunities.</p>
+
+                <h2>How We Store It</h2>
+                <p>Submitted data is currently stored in a local SQLite database as part of this validation-stage website. This setup is acceptable for early validation but should be upgraded for production-scale security and operations.</p>
+
+                <h2>How We Use It</h2>
+                <p>We use your submission only for product research, follow-up communication, and qualification for early-access discussions, pilots, and demos.</p>
+
+                <h2>Third-Party Services</h2>
+                <p>This site is designed to be deployable on Render and may be stored in infrastructure connected to a GitHub repository for deployment workflows.</p>
+
+                <h2>Contact</h2>
+                <p>For privacy-related questions, contact <a href="mailto:hello@example.com">hello@example.com</a>.</p>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
